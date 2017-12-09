@@ -13,7 +13,7 @@ namespace Team {
 // Run during initialization to initialize drive motors
 void DriveTrain::getDriveMotors(){
 	unsigned int motorList [] = Reference::driveMotorList;
-	for(unsigned int index = 0; index < sizeof(motorList); index++){
+	for(unsigned int index = 0; index < 4; index++){
 		DriveTrain::motors[index] = new TalonSRX(motorList[index]);
 	}
 	// Debug print statement
@@ -26,5 +26,8 @@ void DriveTrain::joystickDrive(){
 }
 void DriveTrain::run(){
 	joystickDrive();
+}
+void DriveTrain::drive(float left, float right){
+	DriveTrain::motors[0].Set(left*Team::getTotalWheelPower()*Team::getWheelPower((unsigned int)0));
 }
 }
