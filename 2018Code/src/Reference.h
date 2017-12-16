@@ -54,7 +54,7 @@ private:
 	perc wheelPowers [] = {100,100};
 public:
 	// The drive motors' ID numbers. 0 = FL, 1 = FR, 2 = BL, 3 = BR
-	ID driveMotorList [4] = {1,2,3,4};
+	ID driveMotorList [4] = {31,32,10,11};
 	// A method to return the total wheel power in decimal format
 	unsigned float getTotalWheelPower();
 	// A method to return the wheel powers of the individual wheels in decimal format. 0 = left, 1 = right.

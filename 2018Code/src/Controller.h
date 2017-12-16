@@ -3,7 +3,6 @@
 
 #include <Joystick.h>
 #include "Reference.h"
-#include "Controller.cpp"
 
 using frc::Joystick;
 
